@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #271c19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.daftar input {
+    display: none;
+    visibility: hidden;
+}
+
+.tombol {
+    position: relative;
+    display: flex;
+    padding: 30px 30px;
+    border: 1px solid rgba(56, 42, 42, 0.2);
+    gap: 80px;
+    background: #55423d;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.ikon {
+    color: #fffffe;
+}
+
+.tombol label {
+    width: 20%;
+    font-size: 1.75rem;
+    -webkit-text-stroke: 1px solid #fff8f8;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.tombol label:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 10px #fff);
+}
+
+.garis_bawah {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    height: 5px;
+    transition: all 0.5s ease;
+}
+
+.garis_bawah::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 45px;
+    height: 100%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 10px #fff);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.tombol label.centang~.garis_bawah::before {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 10px #fff);
+}
+
+.tombol label.centang {
+    color: #fff;
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #fff);
+}
